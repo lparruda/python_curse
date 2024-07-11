@@ -16,7 +16,19 @@ altura = float(input('Digite sua altura: '))
 
 def calculo_imc():
     resultado = peso/(altura * altura)
-    resultado = "{:.2f}".format(resultado)
+    resultado = float("{:.2f}".format(resultado))
     print(resultado)
+    if resultado <= 18.5:
+        print(f'Resultado: {resultado} - Magro.')
+    elif  18.5 < resultado < 25:
+      print(f'Resultado: {resultado} - Normal')
+    elif 25.0 <= resultado <= 29.9:
+       print(f'Resultado: {resultado} - Sobrepeso')
+    elif 30.0 <= resultado <= 34.9:
+       print(f'Resultado: {resultado} - Obesidade Gráu I')
+    elif 35 <= resultado <= 39.9:
+       print(f'Resultado: {resultado} - Obesidade Gráu II')
+    else:
+       print(f'Resultado: {resultado} - Obesidade Gráu III')
 
 calculo_imc()
